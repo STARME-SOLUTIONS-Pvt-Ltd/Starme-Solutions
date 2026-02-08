@@ -1,4 +1,4 @@
-import { Cloud, Code, Shield, Smartphone, Database, Cpu, Globe, Layers, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Cloud, Code, Shield, Smartphone, Database, Cpu, Globe, Layers, ArrowRight, Sparkles, CheckCircle2, Palette } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const Services = () => {
@@ -27,116 +27,94 @@ const Services = () => {
     };
   }, []);
 
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for seamless digital transformation.',
-      features: ['AWS & Azure', 'Cloud Migration', 'DevOps Integration'],
-      gradient: 'from-blue-600 to-blue-800',
-      iconBg: 'from-blue-500 to-blue-700',
-      accentColor: 'bg-blue-500/10',
-      glowColor: 'shadow-blue-500/20',
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Bespoke software solutions tailored to your unique business requirements and workflows.',
-      features: ['Web Applications', 'Enterprise Software', 'API Development'],
-      gradient: 'from-purple-600 to-purple-800',
-      iconBg: 'from-purple-500 to-purple-700',
-      accentColor: 'bg-purple-500/10',
-      glowColor: 'shadow-purple-500/20',
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions protecting your digital assets and infrastructure.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance'],
-      gradient: 'from-red-600 to-red-800',
-      iconBg: 'from-red-500 to-red-700',
-      accentColor: 'bg-red-500/10',
-      glowColor: 'shadow-red-500/20',
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Solutions',
-      description: 'Native and cross-platform mobile applications for iOS and Android ecosystems.',
-      features: ['iOS & Android', 'React Native', 'Flutter'],
-      gradient: 'from-green-600 to-green-800',
-      iconBg: 'from-green-500 to-green-700',
-      accentColor: 'bg-green-500/10',
-      glowColor: 'shadow-green-500/20',
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Transform data into actionable insights with advanced analytics and BI solutions.',
-      features: ['Big Data', 'AI/ML', 'Business Intelligence'],
-      gradient: 'from-amber-600 to-amber-800',
-      iconBg: 'from-amber-500 to-orange-600',
-      accentColor: 'bg-amber-500/10',
-      glowColor: 'shadow-amber-500/20',
-    },
-    {
-      icon: Cpu,
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions leveraging artificial intelligence and machine learning.',
-      features: ['Process Automation', 'Predictive Analytics', 'NLP'],
-      gradient: 'from-indigo-600 to-indigo-800',
-      iconBg: 'from-indigo-500 to-indigo-700',
-      accentColor: 'bg-indigo-500/10',
-      glowColor: 'shadow-indigo-500/20',
-    },
-    {
-      icon: Globe,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation strategies aligned with your business vision.',
-      features: ['Strategy Planning', 'Change Management', 'Innovation'],
-      gradient: 'from-cyan-600 to-cyan-800',
-      iconBg: 'from-cyan-500 to-cyan-700',
-      accentColor: 'bg-cyan-500/10',
-      glowColor: 'shadow-cyan-500/20',
-    },
-    {
-      icon: Layers,
-      title: 'IT Consulting',
-      description: 'Expert guidance and strategic advisory for technology decisions and implementations.',
-      features: ['Architecture Design', 'Tech Advisory', 'Best Practices'],
-      gradient: 'from-pink-600 to-pink-800',
-      iconBg: 'from-pink-500 to-pink-700',
-      accentColor: 'bg-pink-500/10',
-      glowColor: 'shadow-pink-500/20',
-    },
-  ];
+const services = [
+  {
+    icon: Code,
+    title: 'Web Application Development',
+    description:
+      'Modern, scalable web applications built using proven Web2 technologies and best engineering practices.',
+    features: ['React & Next.js', 'Backend APIs', 'SaaS Platforms'],
+  },
+  {
+    icon: Smartphone,
+    title: 'Mobile App Development',
+    description:
+      'High-performance mobile applications designed for both Android and iOS using modern frameworks.',
+    features: ['React Native', 'Cross-Platform Apps', 'API Integration'],
+  },
+  {
+    icon: Cpu,
+    title: 'AI & Chatbot Solutions',
+    description:
+      'Intelligent chatbots and AI-powered tools that automate workflows and enhance customer experiences.',
+    features: ['AI Chatbots', 'Workflow Automation', 'AI Integration'],
+  },
+  {
+    icon: Database,
+    title: 'Backend & Cloud Services',
+    description:
+      'Reliable backend systems and cloud deployments designed for scalability, security, and performance.',
+    features: ['Node.js & APIs', 'Databases', 'Cloud Deployment'],
+  },
+  {
+    icon: Layers,
+    title: 'Web3 & Blockchain Solutions',
+    description:
+      'Blockchain-based applications and integrations for secure, transparent, and decentralized systems.',
+    features: ['Smart Contracts', 'DApps', 'Blockchain Integration'],
+  },
+  {
+    icon: Shield,
+    title: 'Security & Best Practices',
+    description:
+      'Security-first development practices to protect applications, user data, and infrastructure.',
+    features: ['Authentication', 'Secure APIs', 'Data Protection'],
+  },
+  {
+    icon: Globe,
+    title: 'Product & Digital Consulting',
+    description:
+      'Technical guidance to help startups and businesses plan, build, and scale digital products.',
+    features: ['Product Planning', 'Tech Stack Guidance', 'Scalable Architecture'],
+  },
+  {
+    icon: Palette,
+    title: 'UI, Poster & Card Design',
+    description:
+      'Creative visual designs that strengthen brand identity and support product launches and marketing efforts.',
+    features: ['UI Design', 'Posters & Banners', 'Business Cards & Creatives'],
+  },
+];
 
   return (
-    <section ref={sectionRef} id="services" className="relative py-32 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden">
-      {/* Subtle background elements */}
+    <section ref={sectionRef} id="services" className="relative py-32 bg-gradient-to-br from-stone-200 via-stone-100 to-neutral-200 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'{'}</div>
+      <div className="absolute bottom-20 right-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'}'}</div>
+      <div className="absolute top-1/2 left-1/4 text-4xl text-stone-800/8 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'\\\\'}</div>
+      <div className="absolute top-2/3 right-1/3 text-4xl text-stone-800/8 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'//'}</div>
+
+      {/* Subtle background pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-l from-blue-100/40 to-transparent rounded-full filter blur-[120px] animate-float-slow"></div>
-        <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-gradient-to-r from-amber-100/40 to-transparent rounded-full filter blur-[120px] animate-float-slow-delayed"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-full mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-semibold text-slate-700">Our Services</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-800/90 border border-stone-700 rounded-md mb-8 shadow-md">
+            <Sparkles className="w-4 h-4 text-stone-300" />
+            <span className="text-xs font-semibold text-stone-200 tracking-widest uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>Our Services</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-            Our <span className="bg-gradient-to-r from-blue-900 via-blue-700 to-amber-600 bg-clip-text text-transparent">Services</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-stone-900 mb-6 tracking-tighter uppercase leading-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', 'Arial Black', sans-serif", letterSpacing: '-0.03em' }}>
+            OUR SERVICES
           </h2>
           
-          <div className="relative w-32 h-1.5 bg-gradient-to-r from-blue-900 via-blue-600 to-amber-600 mx-auto mb-8 rounded-full overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-          </div>
+          <div className="relative w-32 h-1 bg-stone-800 mx-auto mb-8"></div>
           
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-            Comprehensive technology solutions designed to accelerate your business growth and digital excellence.
+          <p className="text-base sm:text-lg text-stone-700 max-w-3xl mx-auto leading-relaxed uppercase tracking-wide font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Comprehensive technology solutions for business growth.
           </p>
         </div>
 
@@ -144,75 +122,64 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isHovered = hoveredIndex === index;
             
             return (
               <div
                 key={index}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-slate-100 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`group relative bg-stone-50/90 backdrop-blur-sm rounded-sm p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-stone-300/50 hover:border-stone-800 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ 
                   transitionDelay: `${index * 50}ms`,
                   animationDelay: `${index * 0.1}s`,
                 }}
               >
-                {/* Animated gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                
-                {/* Top corner accent */}
-                <div className={`absolute top-0 right-0 w-32 h-32 ${service.accentColor} rounded-bl-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-500`}></div>
-
-                {/* Glow effect on hover */}
-                <div className={`absolute inset-0 ${service.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl`}></div>
+                {/* Top corner number indicator */}
+                <div className="absolute top-3 right-3 text-xs font-bold text-stone-400 tracking-wider" style={{ fontFamily: "'Courier New', monospace" }}>
+                  {String(index + 1).padStart(2, '0')}
+                </div>
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className={`relative w-16 h-16 bg-gradient-to-br ${service.iconBg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white" />
-                    
-                    {/* Icon glow */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${service.iconBg} rounded-2xl opacity-0 group-hover:opacity-50 blur-md transition-opacity duration-300`}></div>
+                  <div className="relative w-12 h-12 bg-stone-800 rounded-sm flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md">
+                    <Icon className="w-6 h-6 text-stone-100" />
                   </div>
 
                   {/* Title */}
-                  <h3 className={`text-xl font-bold text-slate-900 mb-3 group-hover:bg-gradient-to-r group-hover:${service.gradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300`}>
+                  <h3
+                    className="text-base font-black mb-3 text-stone-900 transition-all duration-300 uppercase tracking-tight leading-tight"
+                    style={{ fontFamily: "'Roboto Condensed', sans-serif" }}
+                  >
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-600 mb-5 leading-relaxed text-sm min-h-[60px]">
+                  <p className="text-stone-700 mb-5 leading-relaxed text-xs min-h-[60px]" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-2.5 mb-6">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
                       <li 
                         key={idx} 
-                        className="flex items-center text-sm text-slate-600 group-hover:text-slate-700 transition-colors duration-300"
+                        className="flex items-start text-xs text-stone-700 transition-colors duration-300"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        <CheckCircle2 className={`w-4 h-4 mr-2 text-slate-400 group-hover:text-blue-600 transition-colors duration-300`} />
+                        <CheckCircle2 className="w-3 h-3 mr-2 text-stone-500 flex-shrink-0 mt-0.5" />
                         <span className="font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Learn More Link */}
-                  <button className={`group/btn flex items-center gap-2 text-sm font-semibold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}>
+                  <button className="group/btn flex items-center gap-2 text-xs font-bold text-stone-900 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 text-blue-600 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="w-3 h-3 text-stone-900 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </button>
 
                   {/* Bottom accent line */}
-                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                </div>
-
-                {/* Decorative corner dots */}
-                <div className="absolute bottom-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className={`w-1.5 h-1.5 bg-gradient-to-br ${service.gradient} rounded-full animate-pulse`}></div>
-                  <div className={`w-1.5 h-1.5 bg-gradient-to-br ${service.gradient} rounded-full animate-pulse delay-75`}></div>
-                  <div className={`w-1.5 h-1.5 bg-gradient-to-br ${service.gradient} rounded-full animate-pulse delay-150`}></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-stone-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             );
@@ -221,70 +188,31 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className={`text-center mt-16 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-12 py-8 rounded-2xl shadow-2xl">
-            <div className="text-left">
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles className="w-5 h-5 text-amber-400" />
-                <span className="text-sm font-semibold text-blue-200">Custom Solutions</span>
+          <div className="bg-stone-800 text-stone-100 p-10 rounded-sm shadow-2xl border border-stone-700">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-left">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-5 h-5 text-stone-300" />
+                  <span className="text-xs font-semibold text-stone-300 tracking-widest uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>Custom Solutions</span>
+                </div>
+                <h3 className="text-2xl font-black mb-2 uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
+                  NEED A TAILORED SOLUTION?
+                </h3>
+                <p className="text-stone-300 text-sm uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  Let's discuss how we can help your business grow
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-1">Need a Tailored Solution?</h3>
-              <p className="text-blue-100 text-sm">Let's discuss how we can help your business grow</p>
+              <button className="group px-10 py-4 bg-stone-200 text-stone-900 rounded-sm font-bold uppercase tracking-wider text-sm hover:bg-stone-100 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-stone-800 flex items-center gap-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <span>Contact Us</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
             </div>
-            <button className="group px-8 py-4 bg-white text-blue-900 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center gap-2">
-              <span>Contact Us</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
           </div>
         </div>
       </div>
 
       <style>{`
-        @keyframes float-slow {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(-30px, -30px);
-          }
-        }
-
-        @keyframes float-slow-delayed {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(30px, 30px);
-          }
-        }
-
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .animate-float-slow {
-          animation: float-slow 20s ease-in-out infinite;
-        }
-
-        .animate-float-slow-delayed {
-          animation: float-slow-delayed 25s ease-in-out infinite;
-        }
-
-        .animate-shimmer {
-          animation: shimmer 3s ease-in-out infinite;
-        }
-
-        .delay-75 {
-          animation-delay: 75ms;
-        }
-
-        .delay-150 {
-          animation-delay: 150ms;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
       `}</style>
     </section>
   );

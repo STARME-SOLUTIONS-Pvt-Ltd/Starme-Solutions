@@ -31,116 +31,130 @@ const About = () => {
       icon: Target,
       title: 'Strategic Vision',
       description: 'We align technology with your business objectives to create measurable impact and sustainable growth.',
-      gradient: 'from-blue-600 to-blue-800',
-      iconBg: 'from-blue-500 to-blue-700',
-      accentColor: 'bg-blue-500/10',
     },
     {
       icon: Award,
       title: 'Excellence Driven',
       description: 'Our commitment to quality and innovation has earned us recognition as industry leaders.',
-      gradient: 'from-amber-500 to-amber-700',
-      iconBg: 'from-amber-500 to-orange-600',
-      accentColor: 'bg-amber-500/10',
     },
     {
       icon: Users,
       title: 'Client Focused',
       description: 'Building lasting partnerships through transparency, collaboration, and dedicated support.',
-      gradient: 'from-purple-600 to-purple-800',
-      iconBg: 'from-purple-500 to-purple-700',
-      accentColor: 'bg-purple-500/10',
     },
     {
       icon: TrendingUp,
       title: 'Future Ready',
       description: 'Leveraging emerging technologies to keep your business ahead of the curve.',
-      gradient: 'from-green-600 to-green-800',
-      iconBg: 'from-green-500 to-green-700',
-      accentColor: 'bg-green-500/10',
     },
   ];
 
   const achievements = [
-    { icon: Zap, label: 'Innovation Awards', value: '25+', color: 'from-blue-600 to-blue-800' },
-    { icon: Shield, label: 'Security Certifications', value: '15+', color: 'from-purple-600 to-purple-800' },
-    { icon: Rocket, label: 'Successful Launches', value: '500+', color: 'from-amber-600 to-amber-800' },
-    { icon: Sparkles, label: 'Client Retention', value: '95%', color: 'from-green-600 to-green-800' },
+    {
+      value: '50+',
+      label: 'Completed Projects',
+      icon: Award,
+    },
+    {
+      value: '15+',
+      label: 'Trusted Clients',
+      icon: Users,
+    },
+    {
+      value: '3+',
+      label: 'Years of Learning & Delivery',
+      icon: TrendingUp,
+    },
+    {
+      value: '98%',
+      label: 'Positive Feedback',
+      icon: Zap,
+    },
   ];
 
+
   return (
-    <section ref={sectionRef} id="about" className="relative py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
-      {/* Subtle background decorations */}
+    <section ref={sectionRef} id="about" className="relative py-32 bg-gradient-to-br from-stone-100 via-neutral-50 to-stone-200 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'}'}</div>
+      <div className="absolute bottom-20 left-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'{'}</div>
+      <div className="absolute top-1/3 right-1/4 text-4xl text-stone-800/8 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'//'}</div>
+
+      {/* Subtle background pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full filter blur-[120px] animate-float-slow"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full filter blur-[120px] animate-float-slow-delayed"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-full mb-6 shadow-sm">
-            <Sparkles className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-semibold text-slate-700">About Us</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-800/90 border border-stone-700 rounded-md mb-8 shadow-md">
+            <Sparkles className="w-4 h-4 text-stone-300" />
+            <span className="text-xs font-semibold text-stone-200 tracking-widest uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>About Us</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-            About <span className="bg-gradient-to-r from-blue-900 via-blue-700 to-amber-600 bg-clip-text text-transparent">Starme Solutions</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-stone-900 mb-6 tracking-tighter uppercase leading-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', 'Arial Black', sans-serif", letterSpacing: '-0.03em' }}>
+            ABOUT <span className="block sm:inline">STARME SOLUTIONS</span>
           </h2>
           
-          <div className="relative w-32 h-1.5 bg-gradient-to-r from-blue-900 via-blue-600 to-amber-600 mx-auto mb-8 rounded-full overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-          </div>
+          <div className="relative w-32 h-1 bg-stone-800 mx-auto mb-8"></div>
           
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-light">
-            A premier IT solutions provider delivering transformative technology services to enterprises worldwide.
+          <p className="text-base sm:text-lg text-stone-700 max-w-3xl mx-auto leading-relaxed uppercase tracking-wide font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+            A premier IT solutions provider delivering transformative technology services.
           </p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
           {/* Left Column - Text Content */}
           <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div>
-              <h3 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-                Empowering Businesses Through <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Innovation</span>
+              <h3 className="text-3xl sm:text-4xl font-black text-stone-900 mb-8 leading-tight uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
+                EMPOWERING BUSINESSES THROUGH INNOVATION
               </h3>
               
-              <div className="space-y-5">
-                <p className="text-slate-600 leading-relaxed text-lg">
-                  Founded with a vision to revolutionize the digital landscape, Starme Solutions has grown into a trusted partner
-                  for organizations seeking excellence in technology implementation and digital transformation.
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="text-3xl text-stone-800/30 font-light mt-1" style={{ fontFamily: "'Courier New', monospace" }}>{'\\\\'}</div>
+                  <p className="text-stone-700 leading-relaxed text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    STARME SOLUTIONS IS A TECHNOLOGY-DRIVEN COMPANY FOCUSED ON BUILDING MODERN DIGITAL PRODUCTS
+                    FOR STARTUPS AND GROWING BUSINESSES. WE TURN IDEAS INTO ROBUST, SCALABLE SOLUTIONS USING
+                    PROVEN ENGINEERING PRACTICES.
+                  </p>
+                </div>
+
+                <p className="text-stone-700 leading-relaxed text-sm pl-9" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  OUR TEAM WORKS CLOSELY WITH CLIENTS TO UNDERSTAND THEIR CHALLENGES AND DELIVER CLEAN,
+                  EFFICIENT, AND SECURE SYSTEMS USING THE LATEST WEB AND CLOUD TECHNOLOGIES.
                 </p>
-                <p className="text-slate-600 leading-relaxed text-lg">
-                  Our team of seasoned professionals brings together decades of combined experience, cutting-edge expertise,
-                  and a passion for solving complex business challenges through innovative technology solutions.
-                </p>
-                <p className="text-slate-600 leading-relaxed text-lg">
-                  We believe in building solutions that not only meet today's needs but anticipate tomorrow's challenges,
-                  ensuring our clients stay competitive in an ever-evolving digital world.
+
+                <p className="text-stone-700 leading-relaxed text-sm pl-9" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  WE DON'T JUST BUILD FOR TODAY — WE ARCHITECT SOLUTIONS WITH FLEXIBILITY AND LONG-TERM
+                  GROWTH IN MIND, HELPING BUSINESSES STAY COMPETITIVE AS TECHNOLOGY EVOLVES.
                 </p>
               </div>
             </div>
 
             {/* Mini Achievement Badges */}
-            <div className="grid grid-cols-2 gap-4 pt-6">
+            <div className="grid grid-cols-2 gap-4 pt-8">
               {achievements.map((achievement, index) => {
                 const Icon = achievement.icon;
                 return (
                   <div 
                     key={index}
-                    className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    className="group relative bg-stone-100/80 backdrop-blur-sm rounded-sm p-6 shadow-md border border-stone-300/50 hover:shadow-xl hover:border-stone-800 hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${achievement.color} shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-5 h-5 text-white" />
+                    <div className="flex flex-col gap-3">
+                      <div className="p-2 rounded-sm bg-stone-800 w-fit group-hover:scale-110 transition-transform duration-300">
+                        <Icon className="w-5 h-5 text-stone-100" />
                       </div>
                       <div>
-                        <div className={`text-2xl font-bold bg-gradient-to-r ${achievement.color} bg-clip-text text-transparent`}>
+                        <div className="text-4xl font-black text-stone-900 tracking-tight mb-1" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
                           {achievement.value}
                         </div>
-                        <div className="text-xs text-slate-600 font-medium">{achievement.label}</div>
+                        <div className="text-xs text-stone-700 font-medium uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                          {achievement.label}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -151,52 +165,46 @@ const About = () => {
 
           {/* Right Column - Feature Cards */}
           <div className={`relative transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            {/* Decorative background card */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-amber-500/10 rounded-[2.5rem] transform rotate-3 scale-105"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-blue-500/5 via-purple-500/5 to-amber-500/5 rounded-[2.5rem] transform -rotate-2 scale-105"></div>
-            
             {/* Main content card */}
-            <div className="relative bg-white/90 backdrop-blur-xl rounded-[2rem] p-8 shadow-2xl border border-slate-200/50">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="relative bg-stone-50/90 backdrop-blur-sm rounded-sm p-8 shadow-xl border border-stone-300">
+              <div className="grid gap-6">
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   return (
                     <div
                       key={index}
-                      className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 overflow-hidden"
+                      className="group relative bg-white rounded-sm p-6 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 border border-stone-200 overflow-hidden"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      {/* Hover gradient overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
-                      
-                      {/* Animated corner accent */}
-                      <div className={`absolute top-0 right-0 w-20 h-20 ${feature.accentColor} rounded-bl-full opacity-30 group-hover:scale-150 transition-transform duration-500`}></div>
-                      
-                      {/* Icon */}
-                      <div className={`relative w-14 h-14 bg-gradient-to-br ${feature.iconBg} rounded-xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                        <Icon className="w-7 h-7 text-white" />
+                      <div className="flex gap-5">
+                        {/* Icon */}
+                        <div className="flex-shrink-0 w-12 h-12 bg-stone-800 rounded-sm flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                          <Icon className="w-6 h-6 text-stone-100" />
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1">
+                          <h4 className="font-black text-stone-900 mb-2 text-base uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', sans-serif" }}>
+                            {feature.title}
+                          </h4>
+                          <p className="text-xs text-stone-700 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                            {feature.description}
+                          </p>
+                        </div>
                       </div>
-                      
-                      {/* Content */}
-                      <h4 className="relative font-bold text-slate-900 mb-3 text-lg group-hover:text-blue-900 transition-colors duration-300">
-                        {feature.title}
-                      </h4>
-                      <p className="relative text-sm text-slate-600 leading-relaxed">
-                        {feature.description}
-                      </p>
 
-                      {/* Bottom shine effect */}
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      {/* Bottom accent line */}
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-stone-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                   );
                 })}
               </div>
 
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white px-6 py-3 rounded-2xl shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-300">
+              {/* Corner year badge */}
+              <div className="absolute -top-4 -right-4 bg-stone-800 text-stone-100 px-5 py-3 rounded-sm shadow-xl border-2 border-stone-200">
                 <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  <span className="font-bold text-sm">Industry Leader</span>
+                  <Award className="w-4 h-4" />
+                  <span className="font-bold text-xs tracking-widest" style={{ fontFamily: "'Inter', sans-serif" }}>EST. 2026</span>
                 </div>
               </div>
             </div>
@@ -204,63 +212,36 @@ const About = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className={`text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white px-10 py-6 rounded-2xl shadow-2xl">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-amber-400" />
+        <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="bg-stone-800 text-stone-100 p-10 rounded-sm shadow-2xl border border-stone-700">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-5">
+                <div className="w-16 h-16 bg-stone-700 rounded-sm flex items-center justify-center border border-stone-600">
+                  <Sparkles className="w-8 h-8 text-stone-200" />
+                </div>
+                <div className="text-left">
+                  <div className="font-black text-2xl uppercase tracking-tight mb-1" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
+                    READY TO TRANSFORM?
+                  </div>
+                  <div className="text-sm text-stone-300 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    Let's build something amazing together
+                  </div>
+                </div>
               </div>
-              <div className="text-left">
-                <div className="font-bold text-lg">Ready to Transform?</div>
-                <div className="text-sm text-blue-100">Let's build something amazing together</div>
-              </div>
+              <button className="px-10 py-4 bg-stone-200 text-stone-900 rounded-sm font-bold uppercase tracking-wider text-sm hover:bg-stone-100 transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-stone-800" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Get Started
+              </button>
             </div>
-            <button className="px-8 py-3 bg-white text-blue-900 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              Get Started
-            </button>
           </div>
         </div>
+
+        {/* Decorative quote marks */}
+        <div className="absolute top-1/2 left-8 text-8xl text-stone-800/5 font-serif leading-none">"</div>
+        <div className="absolute bottom-1/4 right-8 text-8xl text-stone-800/5 font-serif leading-none">"</div>
       </div>
 
       <style>{`
-        @keyframes float-slow {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(-30px, -30px);
-          }
-        }
-
-        @keyframes float-slow-delayed {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(30px, 30px);
-          }
-        }
-
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .animate-float-slow {
-          animation: float-slow 20s ease-in-out infinite;
-        }
-
-        .animate-float-slow-delayed {
-          animation: float-slow-delayed 25s ease-in-out infinite;
-        }
-
-        .animate-shimmer {
-          animation: shimmer 3s ease-in-out infinite;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
       `}</style>
     </section>
   );

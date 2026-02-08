@@ -31,108 +31,103 @@ const WhyChooseUs = () => {
       icon: Lightbulb,
       title: 'Innovation First',
       description: 'We leverage cutting-edge technologies and methodologies to deliver solutions that give you a competitive edge.',
-      iconGradient: 'from-yellow-500 to-amber-600',
     },
     {
       icon: CheckCircle2,
       title: 'Proven Track Record',
       description: 'Over 500 successful projects delivered across diverse industries with measurable business impact.',
-      iconGradient: 'from-green-500 to-emerald-600',
     },
     {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and maintenance ensuring your operations run smoothly.',
-      iconGradient: 'from-blue-500 to-blue-700',
     },
     {
       icon: Zap,
       title: 'Rapid Delivery',
       description: 'Agile methodologies and efficient processes ensure timely delivery without compromising quality.',
-      iconGradient: 'from-orange-500 to-red-600',
     },
     {
       icon: Lock,
       title: 'Enterprise Security',
       description: 'Bank-grade security protocols and compliance standards protecting your sensitive data.',
-      iconGradient: 'from-purple-500 to-purple-700',
     },
     {
       icon: Clock,
       title: 'Future-Proof Solutions',
       description: 'Scalable architectures designed to grow with your business and adapt to changing needs.',
-      iconGradient: 'from-cyan-500 to-teal-600',
     },
   ];
 
   return (
-    <section ref={sectionRef} id="why-us" className="relative py-32 bg-white overflow-hidden">
-      {/* Subtle background decorations */}
+    <section ref={sectionRef} id="why-us" className="relative py-32 bg-gradient-to-br from-stone-100 via-neutral-50 to-stone-200 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'}'}</div>
+      <div className="absolute bottom-20 left-12 text-6xl text-stone-800/10 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'{'}</div>
+      <div className="absolute top-1/3 left-1/4 text-4xl text-stone-800/8 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'\\\\'}</div>
+      <div className="absolute bottom-1/3 right-1/4 text-4xl text-stone-800/8 font-light" style={{ fontFamily: "'Courier New', monospace" }}>{'//'}</div>
+
+      {/* Subtle background pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full filter blur-[150px] animate-float-slow"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-50/50 rounded-full filter blur-[150px] animate-float-slow-delayed"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full mb-6 shadow-sm">
-            <Star className="w-4 h-4 text-amber-600 fill-amber-600" />
-            <span className="text-sm font-semibold text-gray-700">Why Choose Us</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-800/90 border border-stone-700 rounded-md mb-8 shadow-md">
+            <Star className="w-4 h-4 text-stone-300" />
+            <span className="text-xs font-semibold text-stone-200 tracking-widest uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>Why Choose Us</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Why Choose <span className="bg-gradient-to-r from-blue-900 to-amber-600 bg-clip-text text-transparent">Starme Solutions</span>
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-stone-900 mb-6 tracking-tighter uppercase leading-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', 'Arial Black', sans-serif", letterSpacing: '-0.03em' }}>
+            WHY CHOOSE <span className="block sm:inline">STARME SOLUTIONS</span>
           </h2>
           
-          <div className="relative w-32 h-1.5 bg-gradient-to-r from-blue-900 to-amber-600 mx-auto mb-8 rounded-full overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-          </div>
+          <div className="relative w-32 h-1 bg-stone-800 mx-auto mb-8"></div>
           
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Partner with a technology leader committed to your success through excellence, innovation, and unwavering support.
+          <p className="text-base sm:text-lg text-stone-700 max-w-3xl mx-auto leading-relaxed uppercase tracking-wide font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Partner with a technology leader committed to your success.
           </p>
         </div>
 
         {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             
             return (
               <div
                 key={index}
-                className={`group relative bg-gradient-to-br from-white to-blue-50/30 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`group relative bg-stone-50/90 backdrop-blur-sm rounded-sm p-8 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-stone-300/50 hover:border-stone-800 overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ 
                   transitionDelay: `${index * 100}ms`,
                 }}
               >
-                {/* Top corner accent */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-900/5 to-amber-600/5 rounded-full transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-700"></div>
+                {/* Top corner number */}
+                <div className="absolute top-3 right-3 text-xs font-bold text-stone-400 tracking-wider" style={{ fontFamily: "'Courier New', monospace" }}>
+                  {String(index + 1).padStart(2, '0')}
+                </div>
 
                 <div className="relative">
-                  {/* Icon with unique color gradient */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${reason.iconGradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white" />
+                  {/* Icon */}
+                  <div className="w-14 h-14 bg-stone-800 rounded-sm flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md">
+                    <Icon className="w-7 h-7 text-stone-100" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors duration-300">
+                  <h3 className="text-lg font-black text-stone-900 mb-3 group-hover:text-stone-900 transition-colors duration-300 uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', sans-serif" }}>
                     {reason.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className="text-stone-700 leading-relaxed mb-6 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {reason.description}
                   </p>
 
                   {/* Animated bottom line */}
-                  <div className="h-0.5 bg-gradient-to-r from-blue-900 to-amber-600 w-0 group-hover:w-full transition-all duration-500"></div>
+                  <div className="h-0.5 bg-stone-800 w-0 group-hover:w-full transition-all duration-500"></div>
                 </div>
-
-                {/* Hover shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               </div>
             );
           })}
@@ -140,26 +135,23 @@ const WhyChooseUs = () => {
 
         {/* CTA Section */}
         <div className={`relative transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="relative bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl p-12 shadow-2xl overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-amber-600/20 to-transparent rounded-full filter blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full filter blur-3xl"></div>
+          <div className="relative bg-stone-800 rounded-sm p-12 shadow-2xl overflow-hidden border border-stone-700">
+            {/* Decorative corner quotes */}
+            <div className="absolute top-6 left-6 text-4xl text-stone-700/30 font-serif leading-none">"</div>
+            <div className="absolute bottom-6 right-6 text-4xl text-stone-700/30 font-serif leading-none">"</div>
             
-            {/* Animated sparkles */}
-            <div className="absolute top-8 left-8 text-amber-400/30 animate-pulse">
-              <Sparkles className="w-6 h-6" />
-            </div>
-            <div className="absolute bottom-8 right-8 text-blue-300/30 animate-pulse delay-500">
-              <Sparkles className="w-5 h-5" />
+            {/* Year badge */}
+            <div className="absolute top-6 right-6 text-xs text-stone-500 border border-stone-700 px-3 py-1.5 rounded-full tracking-widest" style={{ fontFamily: "'Courier New', monospace" }}>
+              ( EST. 2021 )
             </div>
 
             <div className="relative text-center">
-              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-100 mb-4 uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
+                READY TO TRANSFORM YOUR BUSINESS?
               </h3>
               
-              <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Join hundreds of satisfied clients who have elevated their operations with our premium technology solutions.
+              <p className="text-sm text-stone-300 mb-8 max-w-2xl mx-auto leading-relaxed uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Join hundreds of satisfied clients who have elevated their operations.
               </p>
 
               <button
@@ -167,32 +159,33 @@ const WhyChooseUs = () => {
                   const element = document.querySelector('#contact');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-900 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-white/20 transform hover:-translate-y-1 transition-all duration-300"
+                className="group inline-flex items-center gap-3 px-10 py-5 bg-stone-200 text-stone-900 rounded-sm font-bold hover:bg-stone-100 transform hover:-translate-y-1 transition-all duration-300 shadow-lg border-2 border-stone-800 uppercase tracking-wider text-sm"
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <span>Schedule a Consultation</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap justify-center items-center gap-8 mt-10 pt-8 border-t border-white/20">
+              <div className="flex flex-wrap justify-center items-center gap-8 mt-10 pt-8 border-t border-stone-700">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-1">500+</div>
-                  <div className="text-sm text-blue-100">Projects Delivered</div>
+                  <div className="text-4xl font-black text-stone-100 mb-1 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>50+</div>
+                  <div className="text-xs text-stone-400 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>Projects Delivered</div>
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-white/20"></div>
+                <div className="hidden sm:block w-px h-12 bg-stone-700"></div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-1">150+</div>
-                  <div className="text-sm text-blue-100">Global Clients</div>
+                  <div className="text-4xl font-black text-stone-100 mb-1 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>15+</div>
+                  <div className="text-xs text-stone-400 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>Trusted Clients</div>
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-white/20"></div>
+                <div className="hidden sm:block w-px h-12 bg-stone-700"></div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-1">98%</div>
-                  <div className="text-sm text-blue-100">Client Satisfaction</div>
+                  <div className="text-4xl font-black text-stone-100 mb-1 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>98%</div>
+                  <div className="text-xs text-stone-400 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>Client Satisfaction</div>
                 </div>
-                <div className="hidden sm:block w-px h-12 bg-white/20"></div>
+                <div className="hidden sm:block w-px h-12 bg-stone-700"></div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                  <div className="text-sm text-blue-100">Support Available</div>
+                  <div className="text-4xl font-black text-stone-100 mb-1 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>24/7</div>
+                  <div className="text-xs text-stone-400 uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>Support Available</div>
                 </div>
               </div>
             </div>
@@ -201,51 +194,10 @@ const WhyChooseUs = () => {
       </div>
 
       <style>{`
-        @keyframes float-slow {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(-30px, -30px);
-          }
-        }
-
-        @keyframes float-slow-delayed {
-          0%, 100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(30px, 30px);
-          }
-        }
-
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-
-        .animate-float-slow {
-          animation: float-slow 20s ease-in-out infinite;
-        }
-
-        .animate-float-slow-delayed {
-          animation: float-slow-delayed 25s ease-in-out infinite;
-        }
-
-        .animate-shimmer {
-          animation: shimmer 3s ease-in-out infinite;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
         .delay-400 {
           animation-delay: 400ms;
-        }
-
-        .delay-500 {
-          animation-delay: 500ms;
         }
       `}</style>
     </section>
