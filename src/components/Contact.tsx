@@ -226,7 +226,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white border-2 border-stone-300 rounded-sm focus:ring-2 focus:ring-stone-800 focus:border-stone-800 transition-all duration-200 outline-none hover:border-stone-400 text-stone-900"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+91 12345 67890"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </div>
@@ -248,7 +248,7 @@ const Contact = () => {
                   <option value="">Select a service</option>
                   <option value="cloud">Cloud Solutions</option>
                   <option value="development">Custom Development</option>
-                  <option value="security">Cybersecurity</option>
+                  <option value="security">Web Solutions</option>
                   <option value="mobile">Mobile Solutions</option>
                   <option value="analytics">Data Analytics</option>
                   <option value="ai">AI & Automation</option>

@@ -28,10 +28,10 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Michael Chen',
-      role: 'CTO, Global Finance Corp',
+      name: 'Mohammed Aashiq',
+      role: 'Founder, AeriX Digital',
       image: 'https://images.pexels.com/photos/2182969/pexels-photo-2182969.jpeg?auto=compress&cs=tinysrgb&w=200',
-      text: 'Starme Solutions transformed our legacy infrastructure into a modern, scalable cloud platform. Their expertise and professionalism exceeded all expectations.',
+      text: 'Starme Solutions is a highly innovative and reliable startup that truly understands modern business needs. Their approach to problem-solving is creative, customer-focused, and results-driven. I’ve seen their dedication, technical expertise, and commitment to delivering quality solutions. As a founder of AeriX Digital, I highly recommend Starme Solutions for anyone looking for smart, scalable, and future-ready solutions.',
       rating: 5,
     },
     {
@@ -214,7 +214,7 @@ const Testimonials = () => {
                   <Users className="w-6 h-6 text-stone-100" />
                 </div>
                 <div className="text-4xl font-black text-stone-900 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
-                  500+
+                  50+
                 </div>
                 <div className="text-xs text-stone-900 font-black uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', sans-serif" }}>Happy Clients</div>
               </div>

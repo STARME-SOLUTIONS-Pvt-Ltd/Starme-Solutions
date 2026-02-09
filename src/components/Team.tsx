@@ -7,6 +7,8 @@ import abhi from '../assets/team/abhi.jpeg';
 import muthu from '../assets/team/muthu.jpeg';
 import dilli from '../assets/team/dilli.jpeg';
 import lallu from '../assets/team/lallu.jpeg';
+import dinseh from '../assets/team/dinesh.jpeg';
+import ajay from '../assets/team/ajay.jpeg';
 
 const Team = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -75,6 +77,18 @@ const team = [
     role: 'Human Resources Manager',
     image: muthu,
     bio: 'Managing people operations, culture, and talent growth.',
+  },
+    {
+    name: 'Ajay U',
+    role: 'Marketing & Finance Manager',
+    image: ajay,
+    bio: 'Managing marketing campaigns, financial planning, and business development.',
+  },
+    {
+    name: 'Dinseh S',
+    role: 'Marketing & Finance Manager',
+    image: dinseh,
+    bio: 'Managing marketing campaigns, financial planning, and business development.',
   },
 ];
 
@@ -192,7 +206,7 @@ const team = [
                   <Users className="w-7 h-7 text-stone-100" />
                 </div>
                 <div className="text-5xl font-black text-stone-900 tracking-tight" style={{ fontFamily: "'Roboto Condensed', 'Impact', sans-serif" }}>
-                  7
+                  9
                 </div>
                 <div className="text-base text-stone-900 font-black uppercase tracking-tight" style={{ fontFamily: "'Roboto Condensed', sans-serif" }}>
                   Expert Team Members
